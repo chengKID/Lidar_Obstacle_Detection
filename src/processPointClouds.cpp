@@ -122,8 +122,6 @@ std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT
     return segResult;
 }
 
-
-// TODO: Final-Project
 // Segmentation using RANSAC
 template<typename PointT>
 std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT>::Ptr> ProcessPointClouds<PointT>::RansacSegment(typename pcl::PointCloud<PointT>::Ptr cloud, int maxIterations, float distanceTol)
@@ -209,7 +207,6 @@ std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT
     return seg_result;
 }
 
-// TODO: Final-Project
 // Euclidean clustring
 template<typename PointT>
 void ProcessPointClouds<PointT>::clusterHelper(KdTree* tree, const typename std::vector<PointT, Eigen::aligned_allocator<PointT>>* points, std::vector<int>& cluster, float distanceTol, std::vector<bool> &points_mask, int id)
@@ -225,7 +222,6 @@ void ProcessPointClouds<PointT>::clusterHelper(KdTree* tree, const typename std:
 	}
 }
 
-// TODO: Final-Project
 // Euclidean clustring
 template<typename PointT>
 std::vector<std::vector<int>> ProcessPointClouds<PointT>::euclideanCluster(const typename std::vector<PointT, Eigen::aligned_allocator<PointT>>& points, KdTree* tree, float distanceTol)
@@ -244,7 +240,6 @@ std::vector<std::vector<int>> ProcessPointClouds<PointT>::euclideanCluster(const
 	return clusters;
 }
 
-// TODO: Final-Project
 // Euclidean clustring
 template<typename PointT>
 std::vector<typename pcl::PointCloud<PointT>::Ptr> ProcessPointClouds<PointT>::KDTreeClustering(typename pcl::PointCloud<PointT>::Ptr cloud, float clusterTolerance, int minSize, int maxSize)

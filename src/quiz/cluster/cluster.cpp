@@ -91,8 +91,7 @@ void clusterHelper(KdTree* tree, const std::vector<std::vector<float>>* points, 
 std::vector<std::vector<int>> euclideanCluster(const std::vector<std::vector<float>>& points, KdTree* tree, float distanceTol)
 {
 
-	// TODO: Fill out this function to return list of indices for each cluster
-
+	// TODO: return list of indices for each cluster
 	std::vector<std::vector<int>> clusters;
 	std::vector<bool> points_mask(points.size(), false);
 	for (int i = 0; i < points.size(); i++)
@@ -143,9 +142,9 @@ int main ()
 
   	// Time segmentation process
   	auto startTime = std::chrono::steady_clock::now();
-  	//
+  	
   	std::vector<std::vector<int>> clusters = euclideanCluster(points, tree, 3.0);
-  	//
+  	
   	auto endTime = std::chrono::steady_clock::now();
   	auto elapsedTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
   	std::cout << "clustering found " << clusters.size() << " and took " << elapsedTime.count() << " milliseconds" << std::endl;

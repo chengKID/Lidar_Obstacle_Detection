@@ -48,7 +48,6 @@ public:
 
     std::vector<boost::filesystem::path> streamPcd(std::string dataPath);
 
-    // TODO: Final-Project
     // RANSAC
     std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT>::Ptr> RansacSegment(typename pcl::PointCloud<PointT>::Ptr cloud, int maxIterations, float distanceTol);
     // KD-Tree
@@ -128,7 +127,7 @@ public:
 		    return ids;
 	    }
     };
-    // TODO: Final-Project
+
     // Euclidean Clustring
     void clusterHelper(KdTree* tree, const typename std::vector<PointT, Eigen::aligned_allocator<PointT>>* points, std::vector<int>& cluster, float distanceTol, std::vector<bool> &points_mask, int id);
     std::vector<std::vector<int>> euclideanCluster(const typename std::vector<PointT, Eigen::aligned_allocator<PointT>>& points, KdTree* tree, float distanceTol);

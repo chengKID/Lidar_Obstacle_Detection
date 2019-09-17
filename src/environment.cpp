@@ -39,7 +39,7 @@ void cityBlock(pcl::visualization::PCLVisualizer::Ptr& viewer, ProcessPointCloud
     // ----------------------------------------------------
     // ------ Open 3D viewer and display City Block -------
     // ----------------------------------------------------
-    // TODO: Final-Project
+    // TODO:
     bool render_origin = false;
     bool render_sparse = false;
     bool render_segment = false;
